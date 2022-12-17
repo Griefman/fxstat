@@ -1,0 +1,2 @@
+# fxstat
+EA's statistic
