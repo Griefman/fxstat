@@ -1,6 +1,9 @@
-
-
-name = r'''61181082_1.csv'''
+"""
+Из данных файла, созданного Индикатором Equity-Monitor,
+программа выводит максимальную просадку за день.
+"""
+import math
+name = '61181082_1.csv'
 
 ff = open(name, 'r', encoding='utf-8')
 reports = []
@@ -24,6 +27,17 @@ for i in range(len(reports)):
         dct[reports[i][0]] = diff1
     else:
         if diff2 > dct[reports[i][0]]:
-            dct[reports[i][0]] = round(diff2, 2)
+            dct[reports[i][0]] = math.ceil(diff2)
 
 print(dct)
+
+dd = 250
+count = 0
+for k, v in dct.items():
+    if v > dd:
+        if count > 0:
+            print(count * '* ')
+        print('CRASH')
+        count = 0
+    else:
+        count += 1
