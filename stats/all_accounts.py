@@ -1,8 +1,8 @@
-c
+eurusd = 1.068
 usdchf = 0.925
 btc = 16525
 
-# Waka + FW + Rringe
+# Waka + FW + Fringe
 icm5_685_chf = 10811 / usdchf
 
 # Prado
