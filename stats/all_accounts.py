@@ -6,7 +6,7 @@ btc = 23386
 icm5_685_chf = 11713 / usdchf
 
 # Prado
-robo4_233_btc = 0.227                                                                        * btc
+robo4_233_btc = 0.227 * btc
 robo4_297_usd = 2470
 jappu4_306 = 308
 prado = robo4_233_btc + robo4_297_usd + jappu4_306
