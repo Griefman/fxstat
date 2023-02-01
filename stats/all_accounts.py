@@ -1,25 +1,25 @@
-eurusd = 1.0868
-usdchf = 0.92
-btc = 23386
+eurusd = 1.098
+usdchf = 0.909
+btc = 23539
 
 # Waka + FW + Fringe
-icm5_685_chf = 11713 / usdchf
+icm5_685_chf = 10105 / usdchf
 
 # Prado
-robo4_233_btc = 0.227 * btc
-robo4_297_usd = 2470
-jappu4_306 = 308
+robo4_233_btc = 0.210 * btc
+robo4_297_usd = 2200
+jappu4_306 = 267
 prado = robo4_233_btc + robo4_297_usd + jappu4_306
 print(f'Prado: {int(prado)} $')
 # TradeAngel
-icm4_451_usd = 6540
-robo4_612_eur = 6200 * eurusd
+icm4_451_usd = 6201
+robo4_612_eur = 4788 * eurusd
 
 # Among Us
-rann5_353_usdt = 1041
+rann5_353_usdt = 1105
 
 # Apex Trader
-icm5_679_usd = 959
+icm5_679_usd = 1002
 
 # Other
 robo4_109_usd = 408
