@@ -1,4 +1,4 @@
-from fxstat.stats.all_accounts import prado
+# from fxstat.stats.all_accounts import prado
 
 prado_prc_month = [26.41, 3.57, 8.19, 11.91, 16.25, -11.83, 81.32, 66.70, -22.34, -8.11, 78.05, 19.66, -1.73, 20.32,
                    3.41, 9.63, -12.72, -13.21, 10.59, 30.19, 16.97, 19.02, 6.02, 20.19, -40.56, 26.98, -2.36, 98.23,
@@ -6,7 +6,7 @@ prado_prc_month = [26.41, 3.57, 8.19, 11.91, 16.25, -11.83, 81.32, 66.70, -22.34
 
 prado_avg_prc = round(sum(prado_prc_month) / len(prado_prc_month), 2)
 # init_dep = 10000
-deposit = 8000
+deposit = 18000
 # deposit_avg = 10000
 count = 1
 count_y = 1
@@ -22,15 +22,15 @@ last_12_months = prado_prc_month[-12:]
 # print(last_12_months)
 
 flag = True
-
+period = 12
 return_lst = []
 for i in range(len(prado_prc_month)):
-  dep = 8000
+  dep = 22000
 
   if flag:
-    end_year = i + 12
+    end_year = i + period
     temp_lst = prado_prc_month[i:end_year]
-    if len(temp_lst) < 12:
+    if len(temp_lst) < period:
       flag = False
     else:
       for month in temp_lst:
@@ -44,4 +44,5 @@ avg_year_return = counter / len(return_lst)
 print(f'Среднегодовой возврат: {int(avg_year_return)} $')
 print(f'Минимальный возврат: {int(min(return_lst))} $')
 print(f'Максимальный возврат: {int(max(return_lst))} $')
+print(return_lst)
 
