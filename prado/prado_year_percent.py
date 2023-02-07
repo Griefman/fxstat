@@ -6,7 +6,7 @@ prado_prc_month = [26.41, 3.57, 8.19, 11.91, 16.25, -11.83, 81.32, 66.70, -22.34
 
 prado_avg_prc = round(sum(prado_prc_month) / len(prado_prc_month), 2)
 # init_dep = 10000
-deposit = 18000
+deposit = 21700
 # deposit_avg = 10000
 count = 1
 count_y = 1
@@ -25,7 +25,7 @@ flag = True
 period = 12
 return_lst = []
 for i in range(len(prado_prc_month)):
-  dep = 22000
+  dep = 21700
 
   if flag:
     end_year = i + period
