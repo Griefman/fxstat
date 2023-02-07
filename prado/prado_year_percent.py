@@ -25,7 +25,7 @@ flag = True
 period = 12
 return_lst = []
 for i in range(len(prado_prc_month)):
-  dep = 21700
+  dep = 22182
 
   if flag:
     end_year = i + period
@@ -44,5 +44,6 @@ avg_year_return = counter / len(return_lst)
 print(f'Среднегодовой возврат: {int(avg_year_return)} $')
 print(f'Минимальный возврат: {int(min(return_lst))} $')
 print(f'Максимальный возврат: {int(max(return_lst))} $')
+print(len(return_lst))
 print(return_lst)
 
