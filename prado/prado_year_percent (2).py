@@ -6,27 +6,26 @@ prado_prc_month = [26.41, 3.57, 8.19, 11.91, 16.25, -11.83, 81.32, 66.70, -22.34
 
 prado_avg_prc = round(sum(prado_prc_month) / len(prado_prc_month), 2)
 # init_dep = 10000
-deposit = 20000
+deposit = 21700
 # deposit_avg = 10000
 count = 1
 count_y = 1
 for prc in prado_prc_month:
-    deposit *= (1 + prc / 100)
-    if count % 12 == 0:
-        print(f'{count_y}-й год: {round(deposit, 2)}$')
-        count_y += 1
-    count += 1
+  deposit *= (1 + prc / 100)
+  if count % 12 == 0:
+    print(f'{count_y}-й год: {round(deposit, 2)}$')
+    count_y += 1
+  count += 1
 print(f'На {count - 1}-й месяц: {round(deposit, 2)}$')
 
 last_12_months = prado_prc_month[-12:]
 # print(last_12_months)
 
 flag = True
-period = 6
+period = 3
 return_lst = []
 for i in range(len(prado_prc_month)):
   dep = 20000
-
   if flag:
     end_year = i + period
     temp_lst = prado_prc_month[i:end_year]
@@ -46,4 +45,3 @@ print(f'Минимальный возврат: {int(min(return_lst))} $')
 print(f'Максимальный возврат: {int(max(return_lst))} $')
 print(len(return_lst))
 print(return_lst)
-
