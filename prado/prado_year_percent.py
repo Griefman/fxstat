@@ -22,7 +22,7 @@ last_12_months = prado_prc_month[-12:]
 # print(last_12_months)
 
 flag = True
-period = 6
+period = 12
 return_lst = []
 for i in range(len(prado_prc_month)):
   dep = 20000
