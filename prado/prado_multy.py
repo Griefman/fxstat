@@ -14,7 +14,13 @@ for cellObj in sheet['A3': 'I2279']:
 
 # print(reports[:-10])
 print(len(reports))
+dates = []
+for report in reports:
+    date = report[0][0:7]
+    dates.append(date)
 
+dates_set = set(dates)
+print(dates_set)
 pairs_dct = {}
 count = 0
 for report in reports:
