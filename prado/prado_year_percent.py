@@ -3,11 +3,11 @@
 
 prado_prc_month = [26.41, 3.57, 8.19, 11.91, 16.25, -11.83, 81.32, 66.70, -22.34, -8.11, 78.05, 19.66, -1.73, 20.32,
                    3.41, 9.63, -12.72, -13.21, 10.59, 30.19, 16.97, 19.02, 6.02, 20.19, -40.56, 26.98, -2.36, 98.23,
-                   4.68, -0.24, 51.82, 21.02, -3.93, 27, -16.10, 30.48, 22.41, -15.14]
+                   4.68, -0.24, 51.82, 21.02, -3.93, 27, -16.10, 30.48, 22.41, -15.14, -1]
 
 prado_avg_prc = round(sum(prado_prc_month) / len(prado_prc_month), 2)
 # init_dep = 10000
-deposit = 20000
+deposit = 16000
 # deposit_avg = 10000
 count = 1
 count_y = 1
@@ -23,12 +23,12 @@ last_12_months = prado_prc_month[-12:]
 # print(last_12_months)
 
 flag = True
-period = 12
+period = 6
 count_minus = 0
 return_lst = []
-initial_deposit = 20000
+initial_deposit = 16000
 for i in range(len(prado_prc_month)):
-  dep = 20000
+  dep = 16000
   if flag:
     end_year = i + period
     temp_lst = prado_prc_month[i:end_year]
@@ -46,14 +46,16 @@ for item in return_lst:
   if item < initial_deposit:
     count_minus += 1
 
-probability = int(count_minus / len(return_lst) * 100 + 1)
+probability = (count_minus / len(return_lst) * 100)
 
 avg_year_return = counter / len(return_lst)
-print(f'Период: {int(avg_year_return)} months')
+
 print(f'Минимальный возврат: {int(min(return_lst))} $')
-print(f'Вероятность минимального: {int(probability)}%')
 print(f'Средний возврат: {int(avg_year_return)} $')
 print(f'Максимальный возврат: {int(max(return_lst))} $')
+print(f'Вероятность отрицательного возврата за {period} месяцев: {int(probability)}%')
+
+
 
 print(len(return_lst))
 print(return_lst)
