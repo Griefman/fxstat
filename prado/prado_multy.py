@@ -5,7 +5,7 @@ sheet = wb.get_sheet_by_name('Лист1')
 
 print(sheet)
 reports = []
-for cellObj in sheet['A3': 'I2279']:
+for cellObj in sheet['A3': 'I2257']:
     report = []
     for cell in cellObj:
         report.append(cell.value)
@@ -15,15 +15,13 @@ for cellObj in sheet['A3': 'I2279']:
 # print(reports[:-10])
 print(len(reports))
 
-# Получить список дат в формате 2022.01
 
-
-def get_dates(reps):
+def get_dates(trades):  # Получить список дат в формате 2022.01 (trades - список сделок)
     dates = []
-    for rep in reps:
-        date = rep[0][0:7]
+    for trade in trades:
+        date = trade[0][0:7]
         dates.append(date)
-    lst = list(set(dates))
+    lst = list(set(dates))  # Отсортируем уникальные значения
     lst.sort()
     return lst
 
@@ -32,11 +30,11 @@ dates_lst = get_dates(reports)
 print(dates_lst)
 
 
-def get_month_report(month, reports):
+def get_month_report(month, transactions):  # Получить список сделок за месяц
     month_reports = []
-    for rep in reports:
-        if month in rep[0]:
-            month_reports.append(rep)
+    for transaction in transactions:
+        if month in transaction[0]:
+            month_reports.append(transaction)
     return month_reports
 
 
