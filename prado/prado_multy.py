@@ -38,7 +38,7 @@ def get_month_report(month, transactions):  # Получить список сд
     return month_reports
 
 
-print(get_month_report('2022.10', reports))
+# print(get_month_report('2022.10', reports))
 
 
 pairs_dct = {}
