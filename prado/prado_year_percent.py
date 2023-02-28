@@ -19,8 +19,6 @@ for prc in prado_prc_month:
     count += 1
 print(f'На {count - 1}-й месяц: {round(deposit, 2)}$')
 
-last_12_months = prado_prc_month[-12:]
-# print(last_12_months)
 
 flag = True
 period = 6
@@ -57,5 +55,7 @@ print(f'Вероятность отрицательного возврата з�
 
 
 
-print(len(return_lst))
-print(return_lst)
+# print(len(return_lst))
+# print(return_lst)
+
+

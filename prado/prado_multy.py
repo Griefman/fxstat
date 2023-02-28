@@ -9,18 +9,40 @@ for cellObj in sheet['A3': 'I2279']:
     report = []
     for cell in cellObj:
         report.append(cell.value)
-    if 'cancelled' not in report and ('usdjpy' in report or 'cadjpy' in report):
+    if 'cancelled' not in report and ('usdjpy' in report or 'cadjpy' in report or 'xauusd' in report):
         reports.append(report)
 
 # print(reports[:-10])
 print(len(reports))
-dates = []
-for report in reports:
-    date = report[0][0:7]
-    dates.append(date)
 
-dates_set = set(dates)
-print(dates_set)
+# Получить список дат в формате 2022.01
+
+
+def get_dates(reps):
+    dates = []
+    for rep in reps:
+        date = rep[0][0:7]
+        dates.append(date)
+    lst = list(set(dates))
+    lst.sort()
+    return lst
+
+
+dates_lst = get_dates(reports)
+print(dates_lst)
+
+
+def get_month_report(month, reports):
+    month_reports = []
+    for rep in reports:
+        if month in rep[0]:
+            month_reports.append(rep)
+    return month_reports
+
+
+print(get_month_report('2022.10', reports))
+
+
 pairs_dct = {}
 count = 0
 for report in reports:
