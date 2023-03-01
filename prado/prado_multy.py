@@ -1,6 +1,6 @@
 import openpyxl
 
-wb = openpyxl.load_workbook('Y:\YandexDisk\GitHub\/fxstat\prado\prado_multy_trades_do-28022024.xlsx')
+wb = openpyxl.load_workbook('fxstat\prado\prado_multy_trades_do-28022024.xlsx')
 sheet = wb.get_sheet_by_name('Лист1')
 
 print(sheet)
