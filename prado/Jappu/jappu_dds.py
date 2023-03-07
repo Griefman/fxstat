@@ -6,6 +6,7 @@ file = 'prado\\Jappu\\142054306_1.csv'
 
 df = pd.read_csv(file, sep=';')
 
+
 def dataframe_by_month(month, dataframe):
     dataframe_month = dataframe.loc[dataframe['Date'].str.contains(month)]
     return dataframe_month
