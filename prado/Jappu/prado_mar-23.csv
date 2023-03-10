@@ -1,4 +1,4 @@
-Ticket;Open Time;Type;Size;Item;Price;S / L;T / P;Close Time;Price;Commission;Taxes;Swap;Profit;;;;
+﻿Ticket;Open Time;Type;Size;Item;Price;S / L;T / P;Close Time;Price;Commission;Taxes;Swap;Profit;;;;
 1520274558;2023.02.28 19:00:00;sell;0.01;audcad;0.91807;0.00000;0.00000;2023.03.01 02:30:02;0.91636;0.00;0.00;0.01;1.25;;;;
 1520291145;2023.03.01 00:30:20;buy;0.01;gbpusd;1.20311;0.00000;0.00000;2023.03.01 07:30:17;1.20461;0.00;0.00;0.00;1.50;;;;
 1520292415;2023.03.01 01:01:09;buy stop;0.03;usdjpy;136.918;136.749;155.910;2023.03.01 20:59:22;136.163;cancelled;;;;;;;
