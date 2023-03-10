@@ -4,11 +4,11 @@ start_robo_usd = 2197
 start_icm_usd = 8828
 start_alpari_usd = 498
 start_course_btc = 23306
-# 15791$
+# 16289$
 start_deposit = start_robo_btc * start_course_btc / 1000 + start_robo_usd + start_icm_usd +\
                 start_alpari_usd
 print(start_deposit)
-# ----
+# ---- На 1-ое Апреля 2023 ---->  16289$
 current_robo_btc = 204.53
 current_robo_usd = 2197
 current_icm_usd = 8828

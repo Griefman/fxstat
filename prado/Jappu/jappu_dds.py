@@ -1,7 +1,7 @@
 import pandas as pd
 
-file = 'prado\\Jappu\\142054306_1.csv'
-# file = '142054306_1.csv' # for Pycharm
+# file = 'prado\\Jappu\\142054306_1.csv'
+file = '142054306_1.csv'  # for Pycharm
 
 
 df = pd.read_csv(file, sep=';')
