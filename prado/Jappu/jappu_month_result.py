@@ -1,6 +1,5 @@
 import pandas as pd
-from openpyxl.styles.builtins import total
-from sympy.physics.units import us
+
 
 file_name = 'prado_mar-23.xlsx'
 
