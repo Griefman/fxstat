@@ -23,8 +23,8 @@ print(taxes)
 pd.to_numeric(filtered_df['Swap'])
 swap = filtered_df['Swap'].sum()
 print(swap)
-# pure_profit = profit - commission - swap - taxes
-# print(pure_profit)
+pure_profit = profit + commission + swap + taxes
+print(pure_profit)
 
 # day_10_march_df = filtered_df[filtered_df['Open Time'].str.contains('2023.03.10')]
 # print(day_10_march_df)
